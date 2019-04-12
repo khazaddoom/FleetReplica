@@ -6,11 +6,30 @@ body {
 header {
   background-color: gray;
   height: 100px;
-  width: 100%;
+  position: fixed;
 }
 
 footer {
   background-color: black;
-  color: red;
+  color: white;
+}
+
+.logo {
+  float: left;
+  height: auto;
+  width: auto;
+  margin: 10px;
+}
+
+.language-toggle, .btn-login {
+  float: right;
+}
+
+.btn {
+  margin: 5px;
+}
+
+main {
+  height: 100vh;
 }
 /*# sourceMappingURL=styles.css.map */
