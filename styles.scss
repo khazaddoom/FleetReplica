@@ -1,14 +1,30 @@
-body {
+$template-height: 400px;
+$header-height: 200px;
+
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 0.5fr 0.5fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+
 }
     
 
 header {
     background-color: gray;
-    height: 100px;
-    position: fixed
+    height: $header-height;
+
+    grid-row: 1/2;
+    grid-column: 1/5;
+    
 }
+
 
 
 footer {
@@ -16,22 +32,42 @@ footer {
     color: white;
 }
 
-.logo {
-    float: left;
-    height: auto;
-    width: auto;
-    margin: 10px
+.main {
+    background-color: green;
+    grid-row: 2/3;
+    grid-column: 1/5;
 }
 
-.language-toggle, .btn-login {
-    float: right
-}
-
-.btn {
-    margin: 5px;
+.main-container {
+    background: url(./images/main.png) no-repeat center center;
 
 }
 
-main {
-    height: 100vh
+.how-to {
+    height: $template-height;
+    background-color: gray;
+    height: $template-height;
+    grid-row: 3/4;
+    grid-column: 1/5;
+}
+
+.about-fleet {
+    height: $template-height;
+    grid-row: 4/5;
+    grid-column: 1/5;
+}
+
+footer {
+    height: $template-height;
+    grid-row: 5/6;
+    grid-column: 1/5;
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr 0.2fr 0.2fr;
+}
+
+.header-container img {
+    margin: 20px
 }
